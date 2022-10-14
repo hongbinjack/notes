@@ -131,4 +131,42 @@ public class EatableDemo {
 
 ------
 
+</br></br></br>
+
+# Lambda表达式练习02(抽象方法带参无返回值)
+
+```java
+public interface Flyable {
+    void fly(String s);
+}
+
+```
+
+```java
+public class FlyableDemo {
+    public static void main(String[] args) {
+        //在主方法中调用useFlyable方法
+        //匿名内部类
+        useFlyable(new Flyable() {
+            @Override
+            public void fly(String s) {
+                System.out.println(s);
+                System.out.println("飞机自驾游");
+            }
+        });
+        System.out.println("-------------------");
+
+        //Lambda表达式
+        useFlyable((String s)->{
+            System.out.println(s);
+            System.out.println("开车自驾游");
+        });
+    }
+    private static void useFlyable(Flyable f){
+        f.fly("风和日丽，晴空万里");
+    }
+}
+
+```
+
 
