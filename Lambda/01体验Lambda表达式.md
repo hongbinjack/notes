@@ -68,7 +68,7 @@ public class LambdaDemo {
 
 </br></br></br>
 
-#                    Lambda表达式的练习01
+#                    Lambda表达式的练习01(抽象方法无参无返回值)
 
 Lambda表达式的使用前提
 
