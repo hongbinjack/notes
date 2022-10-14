@@ -54,4 +54,69 @@ public class LambdaDemo {
 
 - **->**    由英文中画线和大于符号组成，固定写法。代表指向动作
 
-- **代码块**    是我们具体要做的事情，也就是以前我们写的方法体内             
+- **代码块**    是我们具体要做的事情，也就是以前我们写的方法体内        
+
+#                    Lambda表达式的练习01
+
+Lambda表达式的使用前提
+
+- 有一个接口
+
+- 接口中有且仅有一个抽象方法
+
+  ------
+
+  
+
+**代码：**
+
+```java
+public interface Eatable {
+    void eat();
+}
+```
+
+```java
+public class EatableImpl implements Eatable{
+    @Override
+    public void eat() {
+        System.out.println("一天一个苹果");
+    }
+}
+
+```
+
+```java
+public class EatableDemo {
+    /*Lambda表达式的格式：(形式参数) -> {代码块}*/
+    public static void main(String[] args) {
+        //在主方法中调用use Eatable方法
+        Eatable e=new EatableImpl();
+        useEatable(e);
+
+        //优化：匿名内部类
+        useEatable(new Eatable() {
+            @Override
+            public void eat() {
+                System.out.println("一天两个苹果");
+            }
+        });
+
+        //再优化：Lambda表达式
+        useEatable(new Eatable() {
+            @Override
+            public void eat() {
+                System.out.println("一天三个苹果");
+            }
+        });
+    }
+    private static void useEatable(Eatable e){
+        e.eat();
+    }
+}
+
+```
+
+------
+
+
