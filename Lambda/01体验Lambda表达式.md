@@ -1,4 +1,12 @@
 ```java
+public class MyRunnable implements Runnable{
+    @Override
+    public void run() {
+        System.out.println("多线程启动了");
+    }
+}
+```
+```java
 public class LambdaDemo {
 /*
     需求：启动一个线程，在控制台输出一句话，多线程启动了
