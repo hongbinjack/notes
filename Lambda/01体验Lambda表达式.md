@@ -290,4 +290,161 @@ public class LambdaDemo {
   ​      根据局部变量的赋值得知Lambda对应的接口：Runnable r=() -> System.out.println("Lambda表达式");
 
         根据调用方法的参数得知Lambda对应的接口：new Thread(() -> System.out.println("Lambda表达式")).start();
+        
+        
+        
+        
+        </br></br></br>
+
+# Lambda表达式和匿名内部类的区别
+
+**所需类型不同**
+
+- 匿名内部类：可以是接口，也可以是抽象类，还可以是具体类
+
+- Lambda表达式：只能是接口 
+
+     
+
+**使用限制不同**
+
+- 如果接口中有且仅有一个抽象方法，可以使用Lambda表达式，也可以使用匿名内部类
+- 如果接口中多于一个抽象方法，只能使用匿名内部类，而不能使用Lambda表达式
+
+**实现原理不同**
+
+- 匿名内部类：编译之后，产生一个单独的 .class字节码文件
+
+- Lambda表达式：编译之后，没有一个单独的 .class字节码文件。对应的字节码会在运行的时候动态生成。
+
+  ```java
+  package chapter02;
+  
+  public interface Inter {
+      void show();
+  }
+  
+  ```
+
+  
+
+  ```java
+  package chapter02;
+  
+  public interface Inter2 {
+      void showOne();
+      void showTwo();
+  }
+  
+  ```
+
+  ```java
+  package chapter02;
+  
+  public abstract class Animal {
+      public abstract void method();
+  }
+  
+  ```
+
+  
+
+  ```java
+  package chapter02;
+  
+  public class Student {
+      public void study(){
+          System.out.println("爱生活，爱Java");
+      }
+  }
+  
+  ```
+
+  ```java
+  package chapter02;
+  
+  public class LambdaDemo {
+      public static void main(String[] args) {
+           //匿名内部类
+          useInter(new Inter() {
+              @Override
+              public void show() {
+                  System.out.println("接口");
+              }
+          });
+  
+          useAnimal(new Animal() {
+              @Override
+              public void method() {
+                  System.out.println("抽象类");
+              }
+          });
+  
+          useStudent(new Student(){
+              @Override
+              public void study(){
+                  System.out.println("具体类");
+              }
+          } );
+  
+  
+          //以下是使用Lambda表达式调用
+          //
+          useInter(()-> System.out.println("接口"));
+          /*
+          两行代码出错前面讲到过，使用Lambda表达式必有一个接口，并且接口中
+          有且仅有一个抽象方法。下面两行代码一个是抽象类，一个是具体类，不满
+          足条件，所以报错。
+           */
+         /*
+         显示错误：Target type of a lambda conversion must be an interface
+  
+         useAnimal(()-> System.out.println("抽象类"));
+          */
+          /*
+          显示错误：Target type of a lambda conversion must be an interface
+          useStudent(()-> System.out.println("具体类"));
+           */
+  
+         useInter(new Inter2() {
+             @Override
+             public void showOne() {
+                 System.out.println("showOne");
+             }
+      //如果接口中不止一个抽象方法不可以使用lambda表达式，但是可以使用匿名内部类
+             @Override
+             public void showTwo() {
+                 System.out.println("showTwo");
+             }
+         });
+  
+  
+  
+      }
+      //以下方法如果使用lambda表达式，参数必须是接口，且接口中只有一个抽象方法
+      private static void useStudent(Student s){
+          s.study();
+      }
+      private static void useAnimal(Animal a){
+          a.method();
+      }
+      private static void useInter(Inter i){
+          i.show();
+      }
+      private static void useInter(Inter2 i){
+          i.showOne();
+          i.showTwo();
+      }
+  }
+  /*运行结果：
+                接口
+               抽象类
+              具体类
+             接口
+             showOne
+             showTwo
+   */
+  ```
+
+  
 
