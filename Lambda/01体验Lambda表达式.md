@@ -169,4 +169,125 @@ public class FlyableDemo {
 
 ```
 
+</br></br></br>
+
+------
+
+
+
+# Lambda表达式练习03(抽象方法带参带返回值)
+
+```java
+public interface Addable {
+    int add(int x,int y);
+}
+
+```
+
+```java
+public class AddableDemo {
+    public static void main(String[] args) {
+        //在主方法中调用Addable方法
+         useAddable((int x,int y)->{
+             return x+y;
+         });
+
+    }
+
+
+    private static void useAddable(Addable a){
+        int sum=a.add(10,89);
+        System.out.println(sum);
+    }
+}
+
+```
+
+
+
+</br></br></br>
+
+------
+
+
+
+# Lambda表达式的省略模式
+
+**省略规则**
+
+- 参数类型可以省略，但是有多个参数的情况下，不能只省略一个
+- 如果参数有且仅有一个，那么小括号可以省略
+- 如果代码块的语句只有一条，可以省略大括号，甚至是return
+
+```java
+public interface Addable {
+    int add(int x,int y);
+}
+
+```
+
+```java
+public interface Flyable {
+    void fly(String s);
+}
+
+```
+
+```java
+public class LambdaDemo {
+    public static void main(String[] args) {
+     useAddable((int x,int y)->{
+         return x+y;
+     });
+     //参数的类型可以省略,但是有多个参数的情况下不能只省略一个如：int x,y
+        useAddable((x,y)->{
+            return x+y;
+        });
+
+
+       useFlyable((String s)->{
+       System.out.println(s);
+        });
+         //以下是省略参数类型的情况
+        useFlyable((s)->{
+            System.out.println(s);
+        });
+        useFlyable(s->{  //如果参数只有一个，连小括号也可以省略
+            System.out.println(s);
+        });
+
+//如果代码块的语句只有一条，可以省略大括号和分号。如果有return，return也要省略，否则报错
+        useFlyable(s-> System.out.println(s));
+        useAddable((x,y) -> x+y);//useAddable((x,y)-> return x+y);省略return
+    }
+
+
+
+    private static void useFlyable(Flyable f){
+        f.fly("风和日丽，晴空万里");
+    }
+
+    private static void useAddable(Addable a){
+        int sum=a.add(23,99);
+        System.out.println(sum);
+    }
+}
+
+```
+
+
+
+</br></br></br>
+
+# Lambda表达式的注意事项
+
+**注意事项**
+
+- 使用Lambda必须要有接口，并且接口中有且仅有一个抽象方法
+
+- 必须有上下文环境，才能推导出Lambda对应的接口
+
+  ​      根据局部变量的赋值得知Lambda对应的接口：Runnable r=() -> System.out.println("Lambda表达式");
+
+        根据调用方法的参数得知Lambda对应的接口：new Thread(() -> System.out.println("Lambda表达式")).start();
 
