@@ -1,3 +1,4 @@
+'''java
 public class LambdaDemo {
 /*
     需求：启动一个线程，在控制台输出一句话，多线程启动了
@@ -25,3 +26,4 @@ public class LambdaDemo {
         }).start();
     }
 }
+'''
