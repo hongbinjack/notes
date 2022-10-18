@@ -141,7 +141,8 @@ public class Demo{
 
 **HashSet集合保证元素唯一性源码分析**
 
-[241.png](https://github.com/hongbinjack/JavaSE/blob/main/img/241.png)
+
+![241](https://user-images.githubusercontent.com/106834223/196331836-4adc0034-ff9c-4f20-8d7d-6bca403143ee.png)
 
 
 
@@ -240,6 +241,9 @@ final V putVal(int hash, K key, V value, boolean onlyIfAbsent,
 </br></br>
 
 **常见数据结构之哈希表**
+
+![242](https://user-images.githubusercontent.com/106834223/196331874-59a7459e-8ef1-441b-a8b0-b2333df94deb.png)
+
 
 <u>哈希表</u>
 
