@@ -38,3 +38,7 @@ Max_data_length: 0
 
 
 
+
+
+**二进制日志（Binary Log）** 也可叫作变更日志（Update Log），是 MySQL 中非常重要的日志。 主要用于记录数据库的变化情况，即 SQL 语句的 DDL 和 DML 语句，不包含数据记录查询操作。
+
