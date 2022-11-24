@@ -1,6 +1,8 @@
 
 ## 2.2运行时数据区域
-![image](https://user-images.githubusercontent.com/106834223/200105276-234eccee-e82c-418b-84ee-e4499046d64b.png)
+![CTR_2(FA$93C{%V@I2LZO$R](https://user-images.githubusercontent.com/106834223/203720579-be46517f-4070-4c8c-92e0-1f9dad7265e0.png)
+
+-----
  
 ![image](https://user-images.githubusercontent.com/106834223/200109613-0b6bd14b-0e2a-42a6-ab43-dcfdf7e018f4.png)
 
