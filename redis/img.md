@@ -12,7 +12,10 @@
 
 ![7](https://user-images.githubusercontent.com/106834223/205228634-1be386da-734c-4722-9045-c9df538f315d.png)
 
+![8](https://user-images.githubusercontent.com/106834223/205232160-df2e049b-c844-4c3a-8756-dcfd2669b7a1.png)
 
+![9](https://user-images.githubusercontent.com/106834223/205235535-b122df52-2b87-4714-add1-7277bf333331.png)
 
+![10](https://user-images.githubusercontent.com/106834223/205236481-97e6d20f-d763-4a5f-98d0-1251ce01a24c.png)
 
 
