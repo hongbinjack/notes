@@ -230,6 +230,11 @@ Redis安装完成后就自带了命令行客户端：redis-cli，使用方式如
 redis-cli [options] [commonds]
 ```
 
+```sh
+1. cd /usr/local/bin
+2. redis-cli -h 192.168.88.129 -p 6379
+3. AUTH hongbin1123
+
 其中常见的options有：
 
 - `-h 127.0.0.1`：指定要连接的redis节点的IP地址，默认是127.0.0.1
@@ -242,6 +247,8 @@ redis-cli [options] [commonds]
 
 不指定commond时，会进入`redis-cli`的交互控制台：
 ![image](https://user-images.githubusercontent.com/106834223/204746664-adb26730-76f1-438b-b5e5-8b9f32c96c11.png)
+
+
 ## 2.2.图形化桌面客户端
 
 GitHub上的大神编写了Redis的图形化桌面客户端，地址：https://github.com/uglide/RedisDesktopManager
