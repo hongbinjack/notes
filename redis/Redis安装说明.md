@@ -234,6 +234,7 @@ redis-cli [options] [commonds]
 1. cd /usr/local/bin
 2. redis-cli -h 192.168.88.129 -p 6379
 3. AUTH hongbin1123
+```
 
 其中常见的options有：
 
