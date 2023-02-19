@@ -366,6 +366,48 @@ git remote add origin 远程仓库地址
 
 - 推送代码
 
+```
+git push origin dev
+```
+
+
+
+* 下载代码
+
+```
+git clone 仓库地址
+```
+
+
+
+* 拉取代码
+
+```
+git pull origin dev
+
+等价于
+git fetch origin dev
+git merge origin/dev
+```
+
+
+
+* 保持代码提交整洁（变基）
+
+```
+git rebase 分支
+```
+
+
+
+* 记录图形展示
+
+```
+git log --graph --pretty=format:"%h %s"
+```
+
+
+
 
 
 
