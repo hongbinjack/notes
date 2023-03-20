@@ -1,7 +1,5 @@
 # Redis安装说明
 
-大多数企业都是基于Linux服务器来部署项目，而且Redis官方也没有提供Windows版本的安装包。因此课程中我们会基于Linux系统来安装Redis.
-
 此处选择的Linux版本为CentOS 7.
 
 Redis的官方网站地址：https://redis.io/
@@ -24,7 +22,7 @@ yum install -y gcc tcl
 ![image](https://user-images.githubusercontent.com/106834223/204745422-32c80c91-d165-4164-a9ea-13226e0600af.png)
 
 例如，我放到了/usr/local/src 目录：
- 
+
 ![image](https://user-images.githubusercontent.com/106834223/204745669-e6cc19ad-d096-4539-a797-af303bf22fbd.png)
 
 解压缩：

@@ -125,9 +125,13 @@ CICS的主要特点：
 
 
 
+<<<<<<< HEAD
 流水线周期：完成一个任务分几步完成，哪一步时间最长就是流水线周期
 
 实践公式中的k是一条流水线分为几段就是几，如图一条指令分为取指-分析-执行三段，所以k就是3
+=======
+------
+>>>>>>> 62af872ce63ec130c1e35d0e47bea2ece03e0975
 
 
 
@@ -141,6 +145,7 @@ k  指令分为几段，这里k分为三段，分别是取值，分析，执行
 
 ![11.1](https://user-images.githubusercontent.com/106834223/222095783-854ae5ee-ee3c-47e3-b93a-61b3b6321aed.png)
 
+<<<<<<< HEAD
 ▲t是流水线执行周期
 
 -----
@@ -148,6 +153,9 @@ k  指令分为几段，这里k分为三段，分别是取值，分析，执行
 ![10.1](https://user-images.githubusercontent.com/106834223/222705088-7ec450a0-9c6c-4738-b570-3896cf1fabb6.png)
 
 100/203就是他的流水线吞吐率
+=======
+
+>>>>>>> 62af872ce63ec130c1e35d0e47bea2ece03e0975
 
 TP~max~忽略流水线建立时间比平常执行所多消耗的时间，在建立之后，每一个流水线的周期
 
@@ -165,6 +173,7 @@ TP~max~忽略流水线建立时间比平常执行所多消耗的时间，在建�
 
 ## 12. 流水线加速比计算
 
+<<<<<<< HEAD
 ----
 
 ![image](https://user-images.githubusercontent.com/106834223/222709093-d496a988-e17a-41bd-a0e6-a9548346137c.png)
@@ -180,6 +189,23 @@ TP~max~忽略流水线建立时间比平常执行所多消耗的时间，在建�
 ------
 
 ![image](https://user-images.githubusercontent.com/106834223/222708135-18ea9df7-473f-49f2-ace0-6eb84c4f1269.png)
+=======
+
+
+![1677128632512](C:\Users\LiuHongBin\AppData\Roaming\Typora\typora-user-images\1677128632512.png)
+
+
+
+------
+
+![1677128784333](C:\Users\LiuHongBin\AppData\Roaming\Typora\typora-user-images\1677128784333.png)
+
+
+
+------
+
+![1677129295861](C:\Users\LiuHongBin\AppData\Roaming\Typora\typora-user-images\1677129295861.png)
+>>>>>>> 62af872ce63ec130c1e35d0e47bea2ece03e0975
 
 ------
 
@@ -193,9 +219,15 @@ TP~max~忽略流水线建立时间比平常执行所多消耗的时间，在建�
 
 运算器，计算器中有相应的寄存器
 
+<<<<<<< HEAD
 ![image](https://user-images.githubusercontent.com/106834223/222709597-49341360-ccde-484e-87a5-1175a553b49b.png)
 
 
+=======
+![1677130182235](C:\Users\LiuHongBin\AppData\Roaming\Typora\typora-user-images\1677130182235.png)
+
+Cache分为按内容存取和按地址存取
+>>>>>>> 62af872ce63ec130c1e35d0e47bea2ece03e0975
 
 ------
 
@@ -207,9 +239,15 @@ TP~max~忽略流水线建立时间比平常执行所多消耗的时间，在建�
 
 
 
+<<<<<<< HEAD
 ![image](https://user-images.githubusercontent.com/106834223/222711306-221f0acc-cb7a-4f68-8883-3ac3bb9f70f2.png)
 
 Cache分为按内容存取和按地址存取，CPU在处理某个数据的时候首先会考虑Cache里面读取，如果读取到了需要的数据，这个叫命中,命中率就是我读取Cache能够获得我需要的数据的概率。如果没有在Cache里面读取到的话，就会往内存中去找
+=======
+![1677140294269](C:\Users\LiuHongBin\AppData\Roaming\Typora\typora-user-images\1677140294269.png)
+
+
+>>>>>>> 62af872ce63ec130c1e35d0e47bea2ece03e0975
 
 ------
 
@@ -219,9 +257,15 @@ Cache分为按内容存取和按地址存取，CPU在处理某个数据的时候
 
 ## 15. 时间局部性与空间局部性
 
+<<<<<<< HEAD
 ![image](https://user-images.githubusercontent.com/106834223/222711615-bd7a178e-47b5-4967-8d7d-ec7b7a55d3d3.png)
 
 
+=======
+
+
+![1677141931424](C:\Users\LiuHongBin\AppData\Roaming\Typora\typora-user-images\1677141931424.png)
+>>>>>>> 62af872ce63ec130c1e35d0e47bea2ece03e0975
 
 - 局部性原理：计算机在处理相关的数据和程序的时候，某一个时段集中地去访问某些指令或读取某一空间的数据
 - 时间局部性：如上述循环语句，需要不断循环，刚访问玩，又要接着访问，直到循环结束
@@ -236,4 +280,8 @@ Cache分为按内容存取和按地址存取，CPU在处理某个数据的时候
 
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 62af872ce63ec130c1e35d0e47bea2ece03e0975
 
